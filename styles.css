@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Poppins:wght@200&family=Work+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+    background-color: #f9f9f9;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-family: 'Borel', cursive;
+    color: navy;
+}
+
+.title:hover {
+    color: rgb(0, 161, 230);
+    cursor: pointer;
+}
+
+/* supaya gameboard di tengah */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64vh;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    background-color: #cfeeff;
+    border: 2px solid black;
+}
+
+.cell {
+    border: 1.5px solid black;
+}
+
+.cell:hover {
+    cursor: pointer;
+    background-color: #aedffa;
+}
+
+.circle {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 8px solid green;
+    margin: 29px auto;
+}
+
+.cross {
+    content: '';
+    height: 60px;
+    width: 60px;
+    position: relative;
+    margin-bottom: 40px;
+    margin-left: 8px;
+    transform: rotate(45deg);
+}
+
+.cross::before, .cross::after {
+    content: '';
+    position: absolute;
+    background-color: brown;
+}
+
+.cross::before {
+    left: 100%;
+    width: 20%;
+    margin-left: -10%;
+    height: 100%;
+}
+
+.cross::after {
+    top: 50%;
+    height: 20%;
+    margin-top: -10%;
+    width: 100%;
+}
+
+.restart-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    background-color: navy;
+    font-weight: bold;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.restart-btn:hover {
+    background-color: rgb(88, 88, 250);
+}
+
+.message {
+    text-align: center;
+    margin: 16px 0;
+    font-size: 1rem;
+}
