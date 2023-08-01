@@ -46,13 +46,15 @@ body {
 
 .cell {
     border: 1.5px solid black;
+    font-size: 50px;
+    color: brown; /* default for X */
 }
 
 .cell:hover {
     cursor: pointer;
     background-color: #aedffa;
 }
-
+/* 
 .circle {
     height: 60px;
     width: 60px;
@@ -89,7 +91,7 @@ body {
     height: 20%;
     margin-top: -10%;
     width: 100%;
-}
+} */
 
 .restart-btn {
     border: none;
